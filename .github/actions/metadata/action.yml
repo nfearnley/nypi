@@ -36,11 +36,7 @@ runs:
       env:
         PACKAGE_NAME: ${{ steps.package-name.outputs.text }}
       run: |
-        if [ -f "${PACKAGE_NAME}/__init__.py" ]; then
-          PACKAGE_PATH=${PACKAGE_NAME}/__init__.py
-        else
-          PACKAGE_PATH=${PACKAGE_NAME}.py
-        fi
+        PACKAGE_PATH=${PACKAGE_NAME}/__init__.py
         echo "::set-output name=text::${PACKAGE_PATH}"
       shell: bash
 

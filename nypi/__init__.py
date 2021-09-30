@@ -4,7 +4,7 @@ from typing import Union
 
 from requests_cache import CachedSession
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 jtype = Union["jdict", "jlist", str, int, float, bool, None]
 jdict = dict[str, jtype]
